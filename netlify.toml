@@ -1,0 +1,35 @@
+# Netlify settings - DON'T PUT ENVIRONMENT VARIABLES IN HERE.
+# Place environment variables in the Netlify dashboard for security.
+
+# Development build settings
+[dev]
+  # Directory to change to before starting a build
+  base = ""
+  # Command to start the development server
+  command = "npm run start"
+  # Port that runs the Netlify App
+  port = 9090
+  # Port that Vite.js runs on
+  targetPort = 5173
+  # Directory containing Netlify Functions
+  functions = "netlify/functions"
+
+# Global build settings
+[build]
+  # Directory to change to before starting a build
+  base = ""
+  # Directory containing the deploy-ready files
+  publish = "build"
+  # Build command
+  command = "npm run build"
+
+# Global environment settings (for all build contexts)
+[build.environment]
+  # No YARN_VERSION since we are using npm
+
+# Global redirects and headers settings
+[[redirects]]
+  # Basic redirect rule
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,11 @@
+node_modules/*
+package.json
+package-lock.json
+README.md
+vite.config.js
+.eslintrc.cjs
+.gitignore
+.prettierrc
+.prettierignore
+./node_modules/**
+**/node_modules/**

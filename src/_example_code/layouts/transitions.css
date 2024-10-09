@@ -1,0 +1,87 @@
+.layout {
+  position: relative;
+}
+
+
+/* .ribbon .MuiDrawer-paper, */
+.mobile-transition {
+  position: absolute;
+  width: 100%;
+}
+
+/* Desktop transitions */
+
+/* FORWARD */
+
+.desktop-transition-enter .layout {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.desktop-transition-enter-active .layout {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 225ms ease, opacity 750ms ease;
+}
+
+.desktop-transition-exit .layout {
+  /* transform: translateY(0); */
+  /* opacity: 0; */
+}
+
+.desktop-transition-exit-active .layout {
+  /* transform: translateY(-100%);
+  transition: transform 300ms; */
+  /* opacity: 0; */
+} 
+
+
+/* Mobile transitions & Desktop Drawer */
+
+/* FORWARD */
+
+.page-forward:not(.disable-transition) .mobile-transition-enter,
+.page-forward:not(.disable-transition) .desktop-transition-enter .ribbon .MuiDrawer-paper {
+  transform: translateX(100%);
+}
+
+.page-forward:not(.disable-transition) .mobile-transition-enter-active,
+.page-forward:not(.disable-transition) .desktop-transition-enter-active .ribbon .MuiDrawer-paper {
+  transform: translateX(0);
+  transition: transform 225ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.page-forward:not(.disable-transition) .mobile-transition-exit,
+.page-forward:not(.disable-transition) .desktop-transition-exit .ribbon .MuiDrawer-paper {
+  transform: translateX(0);
+}
+
+.page-forward:not(.disable-transition) .mobile-transition-exit-active,
+.page-forward:not(.disable-transition) .desktop-transition-exit-active .ribbon .MuiDrawer-paper {
+  transform: translateX(-100%);
+  transition: transform 225ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* BACK */
+
+.page-back .mobile-transition-enter,
+.page-back .desktop-transition-enter .ribbon .MuiDrawer-paper {
+  transform: translateX(-100%);
+}
+
+.page-back .mobile-transition-enter-active,
+.page-back .desktop-transition-enter-active .ribbon .MuiDrawer-paper {
+  transform: translateX(0);
+  transition: transform 195ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.page-back .mobile-transition-exit,
+.page-back .desktop-transition-exit .ribbon .MuiDrawer-paper {
+  transform: translateX(0px);
+}
+
+.page-back .mobile-transition-exit-active,
+.page-back .desktop-transition-exit-active .ribbon .MuiDrawer-paper {
+  transform: translateX(100%);
+  transition: transform 195ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}

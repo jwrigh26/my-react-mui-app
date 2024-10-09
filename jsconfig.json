@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "paths": {
+      "assets": ["./src/assets"],
+      "components": ["./src/components"],
+      "data": ["./src/data"],
+      "features": ["./src/features"],
+      "hooks": ["./src/hooks"],
+      "layouts": ["./src/layouts"],
+      "lib": ["./src/lib"],
+      "pages": ["./src/pages"],
+      "providers": ["./src/providers"],
+      "router": ["./src/lib/router"],
+      "services": ["./src/services"],
+      "src": ["./src"],
+      "styles": ["./src/styles"],
+      "utils": ["./src/utils"],
+      "React": ["./node_modules/react/"]
+    }
+  }
+}
